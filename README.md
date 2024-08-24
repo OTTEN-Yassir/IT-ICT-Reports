@@ -9,7 +9,6 @@ Welcome to the **IT-ICT Reports** repository. This repository contains a collect
 ## Purpose 
 
 The purpose of this repository is to centralize all my work and share my knowledge and experiences in IT and ICT. I hope these reports can serve as a reference and inspiration for other students, professionals, or anyone interested in these fields. 
-
 ## More Information
 
 A more detailed profile about me is available on my [portfolio](https://portfolio-nine-coral-77.vercel.app/).

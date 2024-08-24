@@ -105,7 +105,6 @@ Now, within AS 200, we have a **virtual-link** between the router connecting are
 ![Virtual Link](./images/REPORT-OSPF-EIGRP-BGP/IMG-7-Report-OSPF.png)
 
 ![Virtual Link](./images/REPORT-OSPF-EIGRP-BGP/IMG-8-Report-OSPF.png)
-
 Here is the virtual link in OSPF on the two routers. Specify the area through which to transit, here area 1 because it is between the two. Then specify the router ID you want to reach.
 
 Once this link is established and functional, the routers talk OSPF correctly with each other and can exchange routes.
