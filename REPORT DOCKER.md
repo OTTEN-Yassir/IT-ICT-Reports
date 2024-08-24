@@ -12,9 +12,10 @@ Docker is an open-source platform that allows the creation, distribution, and ex
 Docker operates on a client-server architecture with the Docker daemon (Docker engine) and Docker client. Both can run on the same machine.
 
 - **Image**: A ready-to-use template with instructions for creating containers. The image can be built from a Dockerfile, an existing image, or fetched from a Docker registry (Docker Hub, a public image repository).
-    
+
 - **Container**: The environment running for the image, providing a level of abstraction.
-    ![container](./images/REPORT-DOCKER/IMG-1-Report-Docker.png)
+
+![container](./images/REPORT-DOCKER/IMG-1-Report-Docker.png)
 
 ### Process
 

@@ -79,19 +79,23 @@ It is the protocol used by two border routers of different AS to communicate the
 ### BGP communication between the two AS border routers:
 
 ![BGP Informations](./images/REPORT-OSPF-EIGRP-BGP/IMG-3-Report-OSPF.png)
+
 - Declare your neighbor from the neighboring AS.
 - Redistribute OSPF into BGP so that the learned subnets are shared..
 
 
 ![Redistribute BGP in OSPF](./images/REPORT-OSPF-EIGRP-BGP/IMG-4-Report-OSPF.png)
+
 - In OSPF, redistribute BGP so that the learned routes are shared.
 
 
 ![Routing Table](./images/REPORT-OSPF-EIGRP-BGP/IMG-5-Report-OSPF.png)
+
 By running a `show ip route` command on the border router, you can see that the neighboring AS routes have been shared and learned.
 
 
 ![Routing Table](./images/REPORT-OSPF-EIGRP-BGP/IMG-6-Report-OSPF.png)
+
 On another router, you can see that the neighboring AS routes have been learned via OSPF thanks to the BGP redistribution into OSPF on the border router.
 
 Now, within AS 200, we have a **virtual-link** between the router connecting area 2 to area 1 and the router connecting area 0 to area 1. This virtual-link is a virtual link between the two areas (2 and 0) through area 1.
@@ -101,6 +105,7 @@ Now, within AS 200, we have a **virtual-link** between the router connecting are
 ![Virtual Link](./images/REPORT-OSPF-EIGRP-BGP/IMG-7-Report-OSPF.png)
 
 ![Virtual Link](./images/REPORT-OSPF-EIGRP-BGP/IMG-8-Report-OSPF.png)
+
 Here is the virtual link in OSPF on the two routers. Specify the area through which to transit, here area 1 because it is between the two. Then specify the router ID you want to reach.
 
 Once this link is established and functional, the routers talk OSPF correctly with each other and can exchange routes.
