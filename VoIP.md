@@ -83,15 +83,15 @@ The clients are Ekiga software installed on Windows 7 PCs in the same network as
 
 On the Elastix server, under the **PBX** and **PBX Configuration** tabs, select **Extensions** on the left and **Add Extension** on the right. This page prompts the creation of a type of extension: a **Device**, **Generic SIP Device**.  
 
-![elastix account](AllExtensions.PNG)  
+![elastix account](./images/VoIP/AllExtensions.PNG)  
 
 Click on **Submit** to enter the configuration page; most options remain at their default values.  
 
-![elastix account](DjaouadExtension_1.PNG)  
+![elastix account](./images/VoIP/DjaouadExtension_1.PNG)  
 
 This account will be used by Djaouad. The SIP Alias is his identification number, which is also used as his phone number and email address.  
 
-![elastix account](DjaouadExtension_2.PNG)  
+![elastix account](./images/VoIP/DjaouadExtension_2.PNG)  
 
 Once these elements have been entered, click on **Submit** at the bottom of the page, then on the pop-up **Save Configuration**.  
 
@@ -101,13 +101,13 @@ Once these elements have been entered, click on **Submit** at the bottom of the 
 
 To add an account in the Ekiga application, once launched, select **Edit** then **Accounts**, which provides access to the following interface.  
 
-![ekiga account](listAccount.png)  
+![ekiga account](./images/VoIP/listAccount.png)  
 
   
 
 The **Enable** and **Disable** options allow you to connect and disconnect the selected account, respectively. The **Edit** and **Delete** options open a form.  
 
-![ekiga account](fieldAccount.png)  
+![ekiga account](./images/VoIP/fieldAccount.png)  
 
 **Name** is local, it describes the user.  
 
@@ -129,9 +129,9 @@ Once a second account, under the name of Yassir, was created, we were able to ma
 
 On Ekiga's home screen, a keypad allows entering the recipient's number, i.e., Yassir's ID: 58102. This number is followed by the registrar's address.  
 
-![call account](Clavier.PNG)  
+![call account](./images/VoIP/Clavier.PNG)  
 
-![call account](AppelEnCours.PNG)  
+![call account](./images/VoIP/AppelEnCours.PNG)  
 
   Yassir then receives a call notification through a ringtone and a pop-up from the application, which he can either accept or decline.  
 
@@ -144,7 +144,7 @@ On Ekiga's home screen, a keypad allows entering the recipient's number, i.e., Y
 
 Here is a representation of the exchanges when a call is made to a number recognized by our server.  
 
-![call diagram](callDiagram.png)  
+![call diagram](./images/VoIP/callDiagram.png)  
 
   
 
@@ -172,7 +172,7 @@ Here, the phone number 57444 (announced in the **Follow-Me** List) is associated
 
   
 
-![Follow ME](FollowMe_Pierre.PNG)  
+![Follow ME](./images/VoIP/FollowMe_Pierre.PNG)  
 
   
 
@@ -186,11 +186,11 @@ Other Follow Me settings have been created in a similar manner for various other
 
 A **Day/Night** object is identified by a code and a description. The **Day** and **Night** options are used to define the behavior of the **Day/Night** based on the time of the call.  
 
-![Day/Night](AllDayNight.PNG)  
+![Day/Night](./images/VoIP/AllDayNight.PNG)  
 
 In this example, if someone tries to contact Pierre during the day, the call is redirected to the IVR **VoicemailCenter**. During the night, the caller is sent directly to Pierre's voicemail.  
 
-![Day/Night](DayNight_Pierre.PNG)  
+![Day/Night](./images/VoIP/DayNight_Pierre.PNG)  
 
   
 
@@ -210,7 +210,7 @@ IVR, or **Interactive Voice Response**, is an automated system of interactive vo
 
   
 
-![IVR](System_Recordings.PNG)  
+![IVR](./images/VoIP/System_Recordings.PNG)  
 
   
 
@@ -244,7 +244,7 @@ After redirecting to the info or technical service account, if they are not reac
 
   
 
-![IVR](IVR.PNG)  
+![IVR](./images/VoIP/IVR.PNG)  
 
   
 
@@ -256,21 +256,21 @@ The traditional Voicemail system, allowing users to leave a voice message after 
 
   
 
-![Voicemail](AllWebMail.PNG)  
+![Voicemail](./images/VoIP/AllWebMail.PNG)  
 
   
 
 After a message has been left on the voicemail, an email containing the audio file is sent to the associated recipient.  
 
-![Voicemail](58102Mail.PNG)  
+![Voicemail](./images/VoIP/58102Mail.PNG)  
 
-![Voicemail](ContentMail_2.PNG)  
+![Voicemail](./images/VoIP/ContentMail_2.PNG)  
 
   
 
 Subsequently, the operation was repeated by synchronizing our user extensions not with the mailbox on the server, but with our respective HE2B mailboxes.  
 
-![Voicemail](mailAsterisk.png)  
+![Voicemail](./images/VoIP/mailAsterisk.png)  
 
   
 
@@ -286,9 +286,9 @@ Here are screenshots of the two groups we created:  
 
   
 
-![Ring Group](RingGroups_301.PNG)  
+![Ring Group](./images/VoIP/RingGroups_301.PNG)  
 
-![Ring Group](RingGroups_301.PNG)  
+![Ring Group](./images/VoIP/RingGroups_301.PNG)  
 
 For configuration, we had to fill in several fields, including "ringing strategy." The ringing strategy determines how group members will be alerted. Common strategies include:  
 
@@ -337,7 +337,7 @@ To be able to configure trunks between the different servers, each of them must 
 
   
 
-![IAX2](IAX2.png)  
+![IAX2](./images/VoIP/IAX2.png)  
 
   
 
@@ -356,7 +356,7 @@ To do this, go to **PBX Configuration > Basic > Trunk**. Then, create the trunk 
 
   
 
-![Trunk](trunk.png)  
+![Trunk](./images/VoIP/trunk.png)  
 
   
   
@@ -366,7 +366,7 @@ Here are my two Trunk links for the two servers I want to communicate with. To c
   
   
 
-![Trunk](TrunkVersJulien_1.PNG)  
+![Trunk](./images/VoIP/TrunkVersJulien_1.PNG)  
 
   
 
@@ -386,7 +386,7 @@ Here are my two Trunk links for the two servers I want to communicate with. To c
 
   
 
-![Trunk](TrunkVersJulien_2.PNG)  
+![Trunk](./images/VoIP/TrunkVersJulien_2.PNG)  
 
   
 
@@ -417,7 +417,7 @@ To add a route, go to **Basic > Outbound Routes**.  
 
   
 
-![Route](RouteVersJulien.PNG)  
+![Route](./images/VoIP/RouteVersJulien.PNG)  
 
   
   

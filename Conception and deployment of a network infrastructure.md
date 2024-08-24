@@ -66,14 +66,14 @@ Logical:  
 
   
 
-![logical topologie](logicalTopologie.png)
+![logical topologie](./images/Conception-and-deployment-of-a-network-infrastructure/logicalTopologie.png)
 
 
 Physical :  
 
   
 
-![physical topologie](physicalTopologie.png)
+![physical topologie](./images/Conception-and-deployment-of-a-network-infrastructure/physicalTopologie.png)
 
   
   

@@ -14,7 +14,7 @@ Docker operates on a client-server architecture with the Docker daemon (Docker e
 - **Image**: A ready-to-use template with instructions for creating containers. The image can be built from a Dockerfile, an existing image, or fetched from a Docker registry (Docker Hub, a public image repository).
     
 - **Container**: The environment running for the image, providing a level of abstraction.
-    ![container](IMG-1-Report-Docker.png)
+    ![container](./images/REPORT-DOCKER/IMG-1-Report-Docker.png)
 
 ### Process
 
@@ -23,7 +23,7 @@ Docker operates on a client-server architecture with the Docker daemon (Docker e
 3. Later, you can convert this container into an image itself (**commit**).
 4. If needed, you can also store it on Docker Hub (**push**).
 
-![process](IMG-2-Report-Docker.png)
+![process](./images/REPORT-DOCKER/IMG-2-Report-Docker.png)
 
 When you install Docker on your system, it creates a default network bridge interface called `docker0`. This bridge interface allows Docker containers to communicate with each other and the host network by assigning them an IP address within the same network. It also isolates the traffic between containers while connecting them to the host network and beyond. It has characteristics of a switch.
 
@@ -31,37 +31,37 @@ When you install Docker on your system, it creates a default network bridge inte
 
 1. On a Linux machine, I opened 3 terminals. After installing Docker and verifying it's running with the command 
 
-![status](IMG-3-Report-Docker.png)
+![status](./images/REPORT-DOCKER/IMG-3-Report-Docker.png)
 
 1. I pulled the CentOS image from Docker Hub.
 
-![pull](IMG-4-Report-Docker.png)
+![pull](./images/REPORT-DOCKER/IMG-4-Report-Docker.png)
 
-![list images](IMG-5-Report-Docker.png)
+![list images](./images/REPORT-DOCKER/IMG-5-Report-Docker.png)
 
 3. I created a container, specifically a bash shell.
 
-![run](IMG-6-Report-Docker.png)
+![run](./images/REPORT-DOCKER/IMG-6-Report-Docker.png)
 
 4. I repeated step 3 in another terminal window to have two containers running in parallel.
     
 5. In a third terminal, I ran the command `ip a` to see the IP addresses my machine has. I noticed that there is a `docker0` interface with the IP `172.17.0.1/16`, which will serve as the bridge between the containers. I also saw 2 other `veth` interfaces with different IDs representing my two running containers.
 
-![ip](IMG-7-Report-Docker.png)
+![ip](./images/REPORT-DOCKER/IMG-7-Report-Docker.png)
 
 6. In each container, I executed the command `ip a`. I noticed that an IP address in the same subnet as the `docker0` bridge was assigned to them: `172.17.0.2/16` and `172.17.0.3/16`.
 
-![ip](IMG-8-Report-Docker.png)
+![ip](./images/REPORT-DOCKER/IMG-8-Report-Docker.png)
 
-![ip](IMG-9-Report-Docker.png)
+![ip](./images/REPORT-DOCKER/IMG-9-Report-Docker.png)
 
 7. I tried to ping from one container to the IP address of the other running container.
 
-![ping](IMG-10-Report-Docker.png)
+![ping](./images/REPORT-DOCKER/IMG-10-Report-Docker.png)
 
 8. From my third terminal, I attempted to listen to the traffic on the `docker0` interface using the `tcpdump` command. The ping packets from both containers were clearly visible in the traffic.
 
-![tcpdump](IMG-11-Report-Docker.png)
+![tcpdump](./images/REPORT-DOCKER/IMG-11-Report-Docker.png)
 
 ## Dockerfile?
 
@@ -71,7 +71,7 @@ A Dockerfile is a text script that contains a series of instructions to build a 
 
 1. You need to edit a Dockerfile (case-sensitive).
 
-![dockerfile](IMG-12-Report-Docker.png)
+![dockerfile](./images/REPORT-DOCKER/IMG-12-Report-Docker.png)
 
     - FROM: Specifies the base image on which to build your image.
     - WORKDIR: Specifies the working directory for the next instructions.
@@ -79,17 +79,17 @@ A Dockerfile is a text script that contains a series of instructions to build a 
     - CMD: Specifies the default command that the container will execute when launched.
 2. Create your `hello.py` file in the same directory as your Dockerfile.
 
-![hello.py](IMG-13-Report-Docker.png)
+![hello.py](./images/REPORT-DOCKER/IMG-13-Report-Docker.png)
 
-![hello.py](IMG-14-Report-Docker.png)
+![hello.py](./images/REPORT-DOCKER/IMG-14-Report-Docker.png)
 
 1. Now build your image using the command `docker build -t myContainerName .` (`-t` for tag, `.` because the file is in the current directory).
 
-![build](IMG-15-Report-Docker.png)
+![build](./images/REPORT-DOCKER/IMG-15-Report-Docker.png)
 
 1. Launch your container with the command `docker run myImage`.
 
-![run](IMG-16-Report-Docker.png)
+![run](./images/REPORT-DOCKER/IMG-16-Report-Docker.png)
 
 ### Useful Docker Commands:
 
