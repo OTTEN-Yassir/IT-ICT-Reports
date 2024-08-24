@@ -23,7 +23,7 @@ Each link has a weight, and the one with the lowest weight will be selected. **W
 When executing the `show ip route` command in a router, for the routes learned via OSPF (`O` at the beginning of the line), you will see the column $110/20$.
 - $110$ est l’identifiant du processus OSPF (distance administrative)
 - $20$ est le coût du chemin OSPF pour atteindre la destination
-![Routing Table](images/IMG-1-Report-OSPF.png)
+![Routing Table](IMG-1-Report-OSPF.png)
 
 It should also be kept in mind that OSPF selects only the best routes in its routing table but keeps knowledge of other routes and paths to reach the destination. It maintains an internal database of the entire topology.
 
@@ -68,7 +68,7 @@ It is the protocol used by two border routers of different AS to communicate the
 
 ## LABOS
 
-![Lab Topology](images/IMG-2-Report-OSPF.png)
+![Lab Topology](IMG-2-Report-OSPF.png)
 
 - **AS 100 on the left with 3 OSPF areas 1**
   - **Area 0** is in the center, and the other two are directly connected to it.
@@ -78,43 +78,43 @@ It is the protocol used by two border routers of different AS to communicate the
 
 ### BGP communication between the two AS border routers:
 
-![BGP Informations](images/IMG-3-Report-OSPF.png)
+![BGP Informations](IMG-3-Report-OSPF.png)
 - Declare your neighbor from the neighboring AS.
 - Redistribute OSPF into BGP so that the learned subnets are shared..
 
 
-![Redistribute BGP in OSPF](images/IMG-4-Report-OSPF.png)
+![Redistribute BGP in OSPF](IMG-4-Report-OSPF.png)
 - In OSPF, redistribute BGP so that the learned routes are shared.
 
 
-![Routing Table](images/IMG-5-Report-OSPF.png)
+![Routing Table](IMG-5-Report-OSPF.png)
 By running a `show ip route` command on the border router, you can see that the neighboring AS routes have been shared and learned.
 
 
-![Routing Table](images/IMG-6-Report-OSPF.png)
+![Routing Table](IMG-6-Report-OSPF.png)
 On another router, you can see that the neighboring AS routes have been learned via OSPF thanks to the BGP redistribution into OSPF on the border router.
 
 Now, within AS 200, we have a **virtual-link** between the router connecting area 2 to area 1 and the router connecting area 0 to area 1. This virtual-link is a virtual link between the two areas (2 and 0) through area 1.
 
 ### Virtual link in OSPF
 
-![Virtual Link](images/IMG-7-Report-OSPF.png)
+![Virtual Link](IMG-7-Report-OSPF.png)
 
-![Virtual Link](images/IMG-8-Report-OSPF.png)
+![Virtual Link](IMG-8-Report-OSPF.png)
 Here is the virtual link in OSPF on the two routers. Specify the area through which to transit, here area 1 because it is between the two. Then specify the router ID you want to reach.
 
 Once this link is established and functional, the routers talk OSPF correctly with each other and can exchange routes.
 
 ### Network topology with the EIGRP protocol
 
-![EIGRP Topology](images/IMG-9-Report-OSPF.png)
+![EIGRP Topology](IMG-9-Report-OSPF.png)
 
 The configuration is very simple, you just need to declare the subnets to which the router is connected with the inverse mask on each router, and the routing can be done.
 
-![EIGRP Configuration](images/IMG-10-Report-OSPF.png)
+![EIGRP Configuration](IMG-10-Report-OSPF.png)
 
 
 The `show ip route` command shows:
 - `D` => route learned via EIGRP
 
-![Routing Table](images/IMG-11-Report-OSPF.png)
+![Routing Table](IMG-11-Report-OSPF.png)
